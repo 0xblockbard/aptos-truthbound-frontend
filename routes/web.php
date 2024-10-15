@@ -15,11 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', ['uses' => 'PagesController@home'])->name('home');
 Route::get('/about', ['uses' => 'PagesController@about'])->name('about');
+Route::get('/assert-data', ['uses' => 'PagesController@assertData'])->name('assert_data');
+Route::get('/dispute-data', ['uses' => 'PagesController@disputeData'])->name('dispute_data');
 Route::get('/guide', ['uses' => 'PagesController@guide'])->name('guide');
-Route::get('/connected', ['uses' => 'PagesController@connected'])->name('connected');
-
-Route::get('/campaigns', ['uses' => 'CampaignController@showAll'])->name('show_all_campaigns');
-Route::get('/campaigns/{id}', ['uses' => 'CampaignController@show'])->name('show_campaign');
-
-Route::get('/start', ['uses' => 'CampaignController@create'])->name('create_campaign');
-Route::get('/campaigns/{id}/info', ['uses' => 'CampaignController@edit'])->name('edit_campaign');

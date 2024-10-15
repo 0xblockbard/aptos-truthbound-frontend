@@ -25,17 +25,17 @@ class PagesController extends Controller
         }
     }
 
-    public function guide(){
+    public function assertData(){
         try {
-            return view('pages.guide');
+            return view('pages.assert_data');
         } catch(\Exception $e){
             abort(400);
         }
     }
 
-    public function connected(){
+    public function guide(){
         try {
-            return view('pages.connected');
+            return view('pages.guide');
         } catch(\Exception $e){
             abort(400);
         }

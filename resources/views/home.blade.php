@@ -2,83 +2,90 @@
 
 @section('content')
 
-    <div class="flex flex-col w-full px-10 mt-24">
+<div class="flex w-full py-24" style="background-image: url('https://res.cloudinary.com/blockbard/image/upload/c_scale,w_auto,q_auto,f_auto,fl_lossy/v1729006078/truthbound-header-1_ev4r1t.png'); background-size: cover; background-position: center;">
+  <div class="max-w-7xl">
+      <div class="flex flex-col ml-16 sm:ml-40 bg-white opacity-90 px-12 py-4 rounded-md"> 
+          <h3 class="text-3xl text-blue-800 font-extrabold">Truthbound Data Asserter</h3>
+          <span class="w-14 border-2 border-blue-800 mt-1"></span>
+      </div>
+  </div>
+</div>
 
-        <div class="section_one flex flex-col sm:flex-row w-full">
+<div class="flex flex-col w-full px-10 mt-10">
 
-            <div class="flex flex-col items-start justify-center w-full sm:w-1/2 sm:pr-16 sm:pl-20 pb-10 pt-10 sm:pt-0">
+    <div class="container mx-auto mt-4 px-4 lg:w-10/12">
+      
+      <div class="w-10/12">
+          <h2 class="text-2xl font-bold text-blue-900">Connecting Physical Infrastructure with Decentralized Assurance</h2>
 
-                <h1 class="text-5xl text-indigo-600 font-extrabold">TruthBound</h1>
-                <span class="w-20 border-2 border-indigo-600 mt-2"></span>
-               
-                <h3 class="text-md mt-2 font-semibold italic">Where Aptos creators, developers, and indie makers hangout</h3>
+          <p class="text-gray-600 mt-2">Truthbound brings data assertion to the Aptos blockchain, using the Optimistic Oracle V3 from UMA Protocol as its foundation, where data providers can submit off-chain data for validation and make it accessible on-chain for other decentralised applications. </p>
 
-                <p class="text-base mt-8">Kickstart innovative projects, support enterprising creators, and support the Aptos community as an early adopter</p>
+      </div>
+      
+      <div class="w-10/12 mt-4">
 
-                <div class="flex flex-row mt-10 space-x-4">
-                    <a href="{{ route('show_all_campaigns') }}">
-                        <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Browse Campaigns
-                        </button>
-                    </a>
+          <h3 class="font-semibold text-lg mt-6 mb-6 text-blue-900">Sample Data Assertions:</h3>
+          
+          <table class="min-w-full bg-gray-50 border-2 border-blue-900 rounded-md">
 
-                    <a href="{{ route('create_campaign') }}">
-                        <button type="button" class="home_start_campaign_button invisible inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            Start a Campaign
-                        </button>
-                    </a>
-                </div>
+              <thead>
+                  <tr class="bg-blue-100 text-blue-800 uppercase text-sm">
+                      <th class="py-3 px-4 w-6">ID</th>
+                      <th class="py-3 px-4 ">Data ID</th>
+                      <th class="py-3 px-4 ">Data</th>
+                      <th class="py-3 px-4 ">Status</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {{-- @foreach ($dataAssertions as $assertion)
+                      <tr class="text-gray-800 border-b">
+                          <td class="py-2 px-4">{{ $assertion->id }}</td>
+                          <td class="py-2 px-4">{{ $assertion->data_id }}</td>
+                          <td class="py-2 px-4">{{ $assertion->data }}</td>
+                          <td class="py-2 px-4">
+                              @if($assertion->status == 'resolved')
+                                  <span class="px-2 py-1 text-xs font-semibold text-green-700 bg-green-100 rounded-full">Resolved</span>
+                              @elseif($assertion->status == 'disputed')
+                                  <span class="px-2 py-1 text-xs font-semibold text-red-700 bg-red-100 rounded-full">Disputed</span>
+                              @else
+                                  <span class="px-2 py-1 text-xs font-semibold text-yellow-700 bg-yellow-100 rounded-full">Pending</span>
+                              @endif
+                          </td>
+                      </tr>
+                  @endforeach --}}
 
-                <span class="w-10 border border-indigo-600 mt-24"></span>
-                <p class="text-sm mt-2 italic">Aptos is a decentralised <a href="https://github.com/0xblockbard/aptos-crowd" target="_blank" class="underline hover:text-indigo-600">opensource</a> crowdfunding platform for the community powered by the Aptos Blockchain</p>
+                  <tr class="text-gray-800 text-center border-b">
+                    <td class="py-2 px-4 ">1</td>
+                    <td class="py-2 px-4 ">data id</td>
+                    <td class="py-2 px-4 ">data</td>
+                    <td class="py-2 px-4 ">
+                        <span class="px-2 py-1 text-xs font-semibold text-green-700 bg-green-100 rounded-full">Resolved</span>
+                    </td>
+                </tr>
 
-            </div>
+                <tr class="text-gray-800 text-center border-b">
+                    <td class="py-2 px-4 ">2</td>
+                    <td class="py-2 px-4 ">data id</td>
+                    <td class="py-2 px-4 ">data</td>
+                    <td class="py-2 px-4 ">
+                        <span class="px-2 py-1 text-xs font-semibold text-green-700 bg-green-100 rounded-full">Resolved</span>
+                    </td>
+                </tr>
 
-            <div class="flex flex-col items-center justify-center w-full sm:w-1/2 sm:px-6 py-6 pb-20 sm:pb-0">
+                <tr class="text-gray-800 text-center ">
+                  <td class="py-2 px-4 ">3</td>
+                  <td class="py-2 px-4 ">data id</td>
+                  <td class="py-2 px-4 ">data</td>
+                  <td class="py-2 px-4 ">
+                      <span class="px-2 py-1 text-xs font-semibold text-green-700 bg-green-100 rounded-full">Resolved</span>
+                  </td>
+                </tr>
+              
+              </tbody>
 
-                @include('partials.home_svg')
+          </table>
+      </div>
+  </div>
 
-            </div>
-
-        </div>
-
-        <div class="bg-white py-24 sm:py-32">
-            <div class="mx-auto max-w-7xl px-6 lg:px-8">
-              <div class="mx-auto max-w-2xl lg:text-center">
-                <h2 class="text-base font-semibold leading-7 text-indigo-600">Deploy faster</h2>
-                <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Everything you need to deploy your app</p>
-                <p class="mt-6 text-lg leading-8 text-gray-600">Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra elit nunc.</p>
-              </div>
-              <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-                <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-                  <div class="relative pl-16">
-                    <dt class="text-base font-semibold leading-7 text-gray-900">
-                      <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
-                        </svg>
-                      </div>
-                      Fixed (All-or-Nothing)
-                    </dt>
-                    <dd class="mt-2 text-base leading-7 text-gray-600">Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.</dd>
-                  </div>
-
-                  <div class="relative pl-16">
-                    <dt class="text-base font-semibold leading-7 text-gray-900">
-                      <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
-                        </svg>
-                      </div>
-                      Flexible (Keep-it-all)
-                    </dt>
-                    <dd class="mt-2 text-base leading-7 text-gray-600">Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.</dd>
-                  </div>
-                </dl>
-              </div>
-            </div>
-        </div>
-
-    </div>
-
+</div>
 @endsection
