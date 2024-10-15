@@ -23,11 +23,11 @@
                     <div>
                         <ul class="mt-4 space-y-4 text-md">
 
-                            <li>
-                                <a href="{{ route('about') }}" class="text-gray-500 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400">
-                                    About
+                            {{-- <li>
+                                <a href="{{ route('assert_data') }}" class="text-gray-500 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400">
+                                    Assert Data
                                 </a>
-                            </li>
+                            </li> --}}
 
                             {{-- <li>
                                 <a href="{{ route('about') }}" class="text-gray-500 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400">
@@ -45,8 +45,8 @@
                         <ul class="mt-4 space-y-4 text-md">
 
                             <li>
-                                <a href="{{ route('assert_data') }}" class="text-gray-500 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400">
-                                    Assert Data
+                                <a href="{{ route('about') }}" class="text-gray-500 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400">
+                                    About
                                 </a>
                             </li>
 

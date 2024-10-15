@@ -16,9 +16,9 @@
                         About
                     </a>
 
-                    <a href="{{ route('assert_data') }}" class="{{ \Request::route()->getName() == 'assert_data' ? 'border-blue-900 text-blue-900 font-semibold' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-blue-900' }} inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium hover:border-blue-900">
+                    {{-- <a href="{{ route('assert_data') }}" class="{{ \Request::route()->getName() == 'assert_data' ? 'border-blue-900 text-blue-900 font-semibold' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-blue-900' }} inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium hover:border-blue-900">
                         Assert Data
-                    </a>
+                    </a> --}}
 
                 </div>
 
@@ -26,9 +26,9 @@
 
         <div class="ml-6 flex items-center">
 
-            <div id="connect-wallet" class="connect_wallet cursor-pointer text-sm font-semibold">
+            {{-- <div id="connect-wallet" class="connect_wallet cursor-pointer text-sm font-semibold">
                 connect
-            </div>
+            </div> --}}
 
         </div>
 
