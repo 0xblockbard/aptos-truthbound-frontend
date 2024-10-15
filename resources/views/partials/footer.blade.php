@@ -6,7 +6,7 @@
             <div class="flex flex-col">
 
                 <a href="{{ route('home') }}" class="pl-1">
-                    <span class="font-sans text-lg font-extrabold text-blue-600">Truthbound</span>
+                    <span class="font-sans text-lg font-extrabold text-blue-800">Truthbound</span>
                 </a>
                 <p class="text-gray-600 font-title text-sm pl-1 font-semibold dark:text-gray-200">
                     DePIN Data Asserter
