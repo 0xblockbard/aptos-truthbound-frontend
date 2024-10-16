@@ -24,13 +24,13 @@
                         <ul class="mt-4 space-y-4 text-md">
 
                             {{-- <li>
-                                <a href="{{ route('assert_data') }}" class="text-gray-500 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400">
+                                <a href="{{ route('assert_data') }}" class="text-gray-500 hover:text-gray-900">
                                     Assert Data
                                 </a>
                             </li> --}}
 
                             {{-- <li>
-                                <a href="{{ route('about') }}" class="text-gray-500 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400">
+                                <a href="{{ route('about') }}" class="text-gray-500 hover:text-gray-900">
                                     FAQ
                                 </a>
                             </li> --}}
@@ -45,8 +45,14 @@
                         <ul class="mt-4 space-y-4 text-md">
 
                             <li>
-                                <a href="{{ route('about') }}" class="text-gray-500 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400">
+                                <a href="{{ route('about') }}" class="text-gray-500 hover:text-blue-800 ">
                                     About
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ route('guide') }}" class="text-gray-500 hover:text-blue-800">
+                                    How it works
                                 </a>
                             </li>
 
